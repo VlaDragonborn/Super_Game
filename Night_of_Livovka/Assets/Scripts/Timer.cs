@@ -11,6 +11,8 @@ public class Timer : MonoBehaviour
     public int min = 1;
     public int sec = 30;
     
+    [SerializeField] GameObject imGameOver;
+
     private float gameTime;
 
     void Update()
@@ -53,7 +55,10 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            timer.text = "Пиздец";
+            if (imGameOver)
+            {
+                imGameOver.SetActive(true);
+            }
         }
     }
 }
