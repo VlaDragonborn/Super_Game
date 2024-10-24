@@ -11,10 +11,10 @@ public class Turning_Camera : MonoBehaviour
     float xRotation = 0f; //поворот вокруг оси у
 
 
-    void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked; //блокировка курсора
-    }
+    //void Start()
+    //{
+    //    Cursor.lockState = CursorLockMode.Locked; //блокировка курсора
+    //}
 
     
     void Update()
