@@ -19,11 +19,14 @@ public class NewBehaviourScript : MonoBehaviour
     {     
     }
 
-    void OnTriggerEnter () {
-        if (OneExit) {
-            monstr.SetActive(true);
-            scream.SetActive(true);
-            OneExit = false;
+    public void OnTriggerEnter (Collider other) {
+        if (other.gameObject.tag == "Player") 
+        {
+            if (OneExit) {
+                monstr.SetActive(true);
+                scream.SetActive(true);
+                OneExit = false;
+            }
         }
     }
 }
